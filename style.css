@@ -1,0 +1,35 @@
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+    background-color: #FAFAFA;
+    height: 100%;
+    margin: 0;
+}
+
+.side-bar {
+    width: 300px;
+    height: 100vh;
+
+}
+
+.nav-bar {
+    background-color: #FFE3AE;
+}
+
+/* Asegúrate de que los enlaces sean blancos */
+.side-bar .nav-link {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-size: 16px;
+    transition: 0.5s;
+}
+
+.side-bar .nav-link:hover {
+    color: black;
+    transition: 0.5s;
+    background-color: beige;
+    border-radius: 10px 0px 0px 10px;
+}
