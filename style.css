@@ -5,19 +5,22 @@
 html, body {
     margin: 0;
     padding: 0;
-
+    height: 100%;
     background-color: #FAFAFA;
 }
 
 .side-bar {
     width: 300px;
-    min-height: 100vh;
 }
 
 .nav-bar {
     background-color: #FFE3AE;
 }
 
+
+.navegation {
+    height: 100%;
+}
 
 .side-bar .nav-link {
     color: white;
