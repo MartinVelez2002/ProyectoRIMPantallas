@@ -1,5 +1,7 @@
 *{
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 body {
     background-color: #FAFAFA;
@@ -16,23 +18,24 @@ body {
     position: absolute;
     width: 100vw;
 }
+/* */
+
 
 /* SideBar */
 .side-bar {
-    width: 250px;
+    width: 275px;
     height: 100vh;
     position: fixed;
     padding-top: 80px;
     z-index: 1;
     background-color: #12171e;
+    transition: all 0.5s ease;
 }
 
 .side-bar .nav-link{
     color: white;
     text-align: left;
-    font-size: 16px;
-    padding: 10px;
-    margin-left: 10px;
+    margin: 10px;
     transition: all 0.5s ease;
 }
 
@@ -43,7 +46,13 @@ body {
     border-radius: 10px;
 }
 
-/* Flecha del SideBar */
+.side-bar .nav-item{
+    font-size: 18px;
+}
+
+/* --------- */
+
+/* Flecha del SideBar a la izquierda */
 .side-bar .fa-angles-left{
     color: white;
     margin-left: 80%;
@@ -57,4 +66,43 @@ body {
 .side-bar .fa-angles-left:hover{
     background-color: rgb(218, 218, 218);
     color:#12171e;
+    cursor: pointer;
+}
+/* ------------- */
+
+/* Flecha del SideBar a la derecha */
+.side-bar .fa-angles-right{
+    color: white;
+    padding: 10px;
+    margin-left: 25%;
+    margin-bottom: 5px;
+    background-color: dimgrey;
+    border-radius: 10%;
+    transition: all 0.5s ease;
+}
+
+.side-bar .fa-angles-right:hover{
+    background-color: rgb(218, 218, 218);
+    color:#12171e;
+    cursor: pointer;
+}
+/* ------------- */
+
+.side-bar .nav .fa-solid{
+    font-size: 1.2rem;
+    padding-right: 5px;
+}
+    
+
+.side-bar.active{
+    width: 70px;
+    transition: all 0.5s ease;
+}
+
+.side-bar.active .nav-item {
+    display: none;
+}
+
+.side-bar .nav .tooltip{
+    display: none;
 }
