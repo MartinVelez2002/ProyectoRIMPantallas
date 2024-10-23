@@ -114,3 +114,10 @@ body {
 .side-bar .nav .tooltip {
     display: none;
 }
+
+main .main-content{
+    padding-left: 18%;
+    position: absolute;
+    z-index: 100;
+    color: black;
+}
