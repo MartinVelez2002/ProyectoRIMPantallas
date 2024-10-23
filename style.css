@@ -27,31 +27,29 @@ body {
 
 /* Navbar */
 .navbar {
+    top: 0;
+    position: fixed;
     z-index: 2;
-    /* Asegura que esté encima del sidebar */
-    position: absolute;
     width: 100vw;
+    background-color: var(--navbar-bg);
 }
-
-/* */
-
 
 /* SideBar */
 .side-bar {
-    width: 275px;
-    height: 100vh;
     position: fixed;
-    padding-top: 80px;
-    z-index: 1;
+    top: 70px; /* Ajusta según la altura del navbar */
+    left: 0;
+    width: 250px;
+    height: calc(100% - 70px); /* Altura ajustada tomando en cuenta el navbar */
     background-color: var(--sidebar-bg);
-    transition: all 0.5s ease;
+    overflow-y: auto;
+    transition: width 0.5s ease; /* Mejor transición */
 }
 
 .side-bar .nav-link {
     color: var(--sidebar-text-color);
     text-align: left;
     margin: 10px;
-
     transition: all 0.5s ease;
 }
 
@@ -61,18 +59,18 @@ body {
     margin-right: 10px;
     border-radius: 10px;
 }
-
+/* Listado de los items */
 .side-bar .nav-item {
     font-size: 16px;
+    margin-bottom: 10px;
 }
-
-/* --------- */
 
 /* Flecha del SideBar a la izquierda */
 .side-bar .fa-angles-right,
 .side-bar .fa-angles-left {
     color: var(--sidebar-text-color);
     padding: 10px;
+    margin-top: 10px;
     margin-bottom: 5px;
     background-color: var(--arrow-bg);
     border-radius: 10%;
@@ -86,8 +84,6 @@ body {
     color: var(--arrow-hover-color);
 }
 
-/* ------------- */
-
 .side-bar .fa-angles-right {
     margin-left: 25%;
 }
@@ -96,28 +92,44 @@ body {
     margin-left: 80%;
 }
 
-.side-bar .nav .fa-solid {
-    font-size: 1.2rem;
-    padding-right: 5px;
+/* Tooltips */
+.side-bar .nav .tooltip {
+    display: none;
 }
-
 
 .side-bar.active {
     width: 70px;
-    transition: all 0.5s ease;
 }
 
 .side-bar.active .nav-item {
     display: none;
 }
 
-.side-bar .nav .tooltip {
-    display: none;
+.side-bar.active .tooltip {
+    display: block;
+    position: absolute;
+    left: 70px;
+    top: 10px;
+    background-color: var(--sidebar-hover-bg);
+    padding: 5px;
+    border-radius: 4px;
 }
 
-main .main-content{
-    padding-left: 18%;
-    position: absolute;
-    z-index: 100;
-    color: black;
+/* Main Content */
+.main-content {
+    margin-top: 70px; /* Ajusta el contenido bajo el navbar */
+    margin-left: 250px; /* Espacio para el sidebar */
+    padding: 20px;
+    transition: margin-left 0.5s ease;
+}
+
+.side-bar.active ~ .main-content {
+    margin-left: 70px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
 }

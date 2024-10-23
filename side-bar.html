@@ -14,22 +14,20 @@
     <link rel="stylesheet" href="https://cdn.lineicons.com/4.0/lineicons.css" />
     <!-- CSS - Boxicons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
 </head>
 
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar bg-dark navbar-expand-lg nav-bar">
+    <nav class="navbar bg-dark navbar-expand-lg nav-bar fixed-top">
         <div class="container-fluid">
-            <img class=" mx-5" src="img/logro_alcaldia_milagro.png" alt="Logo Alcaldia" width="150px">
+            <img class="mx-5" src="img/logro_alcaldia_milagro.png" alt="Logo Alcaldia" width="150px">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
-
                     <li class="nav-item">
                         <a class="nav-link disabled" aria-disabled="true">Disabled</a>
                     </li>
@@ -56,7 +54,6 @@
                 </a>
                 <span class="tooltip"> Lugares de Guardia </span>
             </li>
-
             <li class="mb-3">
                 <a class="nav-link active" href="#">
                     <i class="fa-solid fa-users-gear"></i>
@@ -64,8 +61,6 @@
                 </a>
                 <span class="tooltip"> Creación de Roles </span>
             </li>
-
-
             <li class="mb-3">
                 <a class="nav-link active" href="#">
                     <i class="fa-solid fa-users"></i>
@@ -73,7 +68,6 @@
                 </a>
                 <span class="tooltip"> Listado de personal </span>
             </li>
-
             <li class="mb-3">
                 <a class="nav-link active" href="#">
                     <i class="fa-solid fa-indent"></i>
@@ -81,7 +75,6 @@
                 </a>
                 <span class="tooltip"> Listado de personal </span>
             </li>
-
             <li class="mb-3">
                 <a class="nav-link active" href="#">
                     <i class="fa-solid fa-calendar"></i>
@@ -91,8 +84,10 @@
             </li>
         </ul>
     </div>
-    <main>
-        <div class="main-content">
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
             <p>PE KRATOS</p>
         </div>
     </main>
@@ -114,23 +109,17 @@
         integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
         crossorigin="anonymous"></script>
     <script>
-        let flecha = document.getElementById('btn')
-        let sidebar = document.querySelector('.side-bar')
+        let flecha = document.getElementById('btn');
+        let sidebar = document.querySelector('.side-bar');
 
-        btn.onclick = function () {
+        flecha.onclick = function () {
             sidebar.classList.toggle('active');
             if (sidebar.classList.contains('active')) {
                 flecha.classList.replace("fa-angles-left", "fa-angles-right");
-                console.log("Clase cambiada a fa-angles-right");
             } else {
                 flecha.classList.replace("fa-angles-right", "fa-angles-left");
-                console.log("Clase cambiada a fa-angles-left");
             }
-        }
-
-
-
-
+        };
     </script>
 </body>
 
