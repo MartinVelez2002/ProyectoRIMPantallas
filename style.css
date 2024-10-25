@@ -21,8 +21,6 @@ body {
     background-color: var(--bg-color);
     height: 100%;
     margin: 0;
-    display: flex;
-    flex-direction: column;
 }
 
 /* Navbar */
@@ -49,7 +47,7 @@ body {
 .side-bar .nav-link {
     color: var(--sidebar-text-color);
     text-align: left;
-    margin: 10px;
+    margin: 2px;
     transition: all 0.5s ease;
 }
 
@@ -62,7 +60,7 @@ body {
 /* Listado de los items */
 .side-bar .nav-item {
     font-size: 16px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 /* Flecha del SideBar a la izquierda */
@@ -70,7 +68,7 @@ body {
 .side-bar .fa-angles-left {
     color: var(--sidebar-text-color);
     padding: 10px;
-    margin-top: 10px;
+    margin-top: 8px;
     margin-bottom: 5px;
     background-color: var(--arrow-bg);
     border-radius: 10%;
@@ -115,21 +113,19 @@ body {
     border-radius: 4px;
 }
 
-/* Main Content */
+
 .main-content {
-    margin-top: 70px; /* Ajusta el contenido bajo el navbar */
-    margin-left: 250px; /* Espacio para el sidebar */
-    padding: 20px;
+    margin-left: 250px;
+    padding: 10px;
     transition: margin-left 0.5s ease;
 }
 
 .side-bar.active ~ .main-content {
-    margin-left: 70px;
+    margin-left: 60px;
 }
 
 footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-    z-index: 1;
 }
